@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You – BurningUp</title>
+    <link rel="stylesheet" href="thank.css" />
+    <script
+      src="https://kit.fontawesome.com/3bfbb9ac03.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo"
+          ><i class="fa-solid fa-fire"></i>BurningUp</a
+        >
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Home</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Thank You Content Section -->
+    <div class="thank-container">
+      <div class="thank-content">
+        <div class="thank-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h1>Thank You!</h1>
+        <p>We're thrilled to have you on board. Your download is on the way!</p>
+        <p>
+          Get ready to take control of your burnout journey with
+          <span class="highlight">BurningUp</span>. Start tracking your mood and
+          understanding your stress levels today.
+        </p>
+        <div class="thank-buttons">
+          <a href="/" class="thank-btn thank-btn-primary">
+            <i class="fas fa-home" style="margin-right: 0.5rem"></i> Back to
+            Home
+          </a>
+          <a href="/#features" class="thank-btn thank-btn-secondary">
+            Learn More Features
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>About Us</h2>
+            <a href="/sign__up">How it works</a> <a href="/">Testimonials</a>
+            <a href="/">Careers</a> <a href="/">Investments</a>
+            <a href="/">Terms of Service</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Contact Us</h2>
+            <a href="/">Contact</a> <a href="/">Support</a>
+            <a href="/">Destinations</a> <a href="/">Sponsorships</a>
+          </div>
+        </div>
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>Videos</h2>
+            <a href="/">Submit Video</a> <a href="/">Ambassadors</a>
+            <a href="/">Agency</a> <a href="/">Influencer</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Social Media</h2>
+            <a href="/">Instagram</a> <a href="/">Facebook</a>
+            <a href="/">Youtube</a> <a href="/">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="/" id="footer__logo"
+              ><i class="fa-solid fa-fire"></i>BurningUp</a
+            >
+          </div>
+          <p class="website__rights">©BurningUp 2025. All rights reserved</p>
+          <div class="social__icons">
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="//www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A?view_as=subscriber"
+              target="_blank"
+              aria-label="Youtube"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="app.js"></script>
+    <script>
+      function checkAndDownload() {
+        if (
+          document.referrer.includes("download") ||
+          sessionStorage.getItem("shouldDownload")
+        ) {
+          sessionStorage.removeItem("shouldDownload");
+          setTimeout(function () {
+            const link = document.createElement("a");
+            link.href = "app/BurningUp.apk";
+            link.download = "BurningUp.apk";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }, 300);
+        }
+      }
+      window.addEventListener("load", checkAndDownload);
+    </script>
+  </body>
+</html>
