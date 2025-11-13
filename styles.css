@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .navbar {
@@ -31,8 +31,8 @@
 }
 
 #navbar__logo {
-  background-color: #ff8177;
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-color: #1e70ff;
+  background-image: linear-gradient(to top, #0000cd 0%, #55a4da 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -89,17 +89,17 @@
   border: none;
   outline: none;
   border-radius: 4px;
-  background: #f77062;
+  background: #1e70ff;
   color: #fff;
 }
 
 .button:hover {
-  background: #4837ff;
+  background: #7ebcf4;
   transition: all 0.3s ease;
 }
 
 .navbar__links:hover {
-  color: #f77062;
+  color: #1e70ff;
   transition: all 0.3s ease;
 }
 
@@ -226,7 +226,7 @@
 .main__content h1 {
   font-size: 4rem;
   background-color: #ff8177;
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-image: linear-gradient(to top, #0000cd 0%, #55a4da 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -238,7 +238,7 @@
   font-size: 4rem;
   margin-top: 10px;
   background-color: #ff8177;
-  background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+  background-image: linear-gradient(-20deg, #0000cd 0%, #21d4fd 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -254,7 +254,7 @@
 
 .main__btn {
   font-size: 1rem;
-  background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+  background-image: linear-gradient(to top, #0000cd 0%, #55a4da 100%);
   padding: 14px 32px;
   border: none;
   border-radius: 4px;
@@ -275,7 +275,7 @@
 
 .main__btn:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 0;
@@ -369,12 +369,12 @@
   background-color: #ff8177;
   background-image: linear-gradient(
     to right,
-    #ff8177 0%,
-    #ff867a 0%,
-    #ff8c7f 21%,
-    #f99185 52%,
-    #cf556c 78%,
-    #b12a5b 100%
+    #81d1ff 0%,
+    #86d2ff 0%,
+    #8cbfff 21%,
+    #91a5f9 52%,
+    #6c55cf 78%,
+    #5b2ab1 100%
   );
   background-size: 100%;
   -webkit-background-clip: text;
@@ -401,7 +401,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url('/images/pic3.jpg');
+    url("/images/pic3.jpg");
   background-size: cover;
   position: relative;
   color: #fff;
@@ -417,7 +417,7 @@
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.9) 100%
     ),
-    url('/images/pic4.jpg');
+    url("/images/pic4.jpg");
 }
 
 .services__card h2 {
@@ -438,7 +438,7 @@
   border: none;
   outline: none;
   border-radius: 4px;
-  background: #f77062;
+  background: #1e70ff;
   position: absolute;
   top: 440px;
   left: 30px;
