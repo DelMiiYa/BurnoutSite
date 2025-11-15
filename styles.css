@@ -311,12 +311,15 @@
     justify-self: center;
     width: 100%;
     margin: 0 auto;
-    height: 90vh;
+    height: auto;
+    min-height: 60vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .main__content {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   .main__content h1 {
@@ -332,12 +335,24 @@
     margin-top: 1rem;
     font-size: 1.5rem;
   }
+
+  #main__img {
+    height: 50%;
+    width: 50%;
+    margin-bottom: 2rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .main__container {
+    height: auto;
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
   .main__content h1 {
     font-size: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   .main__content h2 {
@@ -345,13 +360,19 @@
   }
 
   .main__content p {
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: 1.5rem;
   }
 
   .main__btn {
     padding: 12px 36px;
     margin: 2.5rem 0;
+  }
+
+  #main__img {
+    height: 40%;
+    width: 40%;
+    margin-bottom: 1.5rem;
   }
 }
 
