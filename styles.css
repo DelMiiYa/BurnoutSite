@@ -698,3 +698,107 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Feedback Section */
+.feedback-section {
+  background: #141414;
+  padding: 5rem 8%;
+}
+
+.feedback-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.feedback-container h2 {
+  color: #7ebcf4;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feedback-input,
+.feedback-textarea {
+  background-color: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #fff;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.feedback-input:focus,
+.feedback-textarea:focus {
+  outline: none;
+  border-color: #1e70ff;
+  box-shadow: 0 0 10px rgba(30, 112, 255, 0.2);
+  background-color: #222;
+}
+
+.feedback-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.feedback-btn {
+  background-image: linear-gradient(to top, #0000cd 0%, #55a4da 100%);
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-btn:hover {
+  background: #4837ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(72, 55, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .feedback-section {
+    padding: 3rem 4%;
+  }
+
+  .feedback-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .feedback-input,
+  .feedback-textarea {
+    padding: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .feedback-section {
+    padding: 2rem 3%;
+  }
+
+  .feedback-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .feedback-form {
+    gap: 1rem;
+  }
+
+  .feedback-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

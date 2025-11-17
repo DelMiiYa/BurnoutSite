@@ -151,12 +151,32 @@
       </section>
     </div>
     <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <script>
-      function handleDownload() {
+      const supabase = window.supabase.createClient(
+        "https://cmkvetkmcdfgkomxpsbs.supabase.co",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNta3ZldGttY2RmZ2tvbXhwc2JzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMzNzAyOTcsImV4cCI6MjA3ODk0NjI5N30.UVJPUhlmeVF7IQzHk_Y5jXMt4Mzwxw2JCZtMChmKmpw"
+      );
+    </script>
+    <script>
+      async function handleDownload() {
+        // Increase download count
+        await increaseDownloadCount();
+
         // Set flag in session storage to trigger download on thank.html
         sessionStorage.setItem("shouldDownload", "true");
         // Navigate to thank.html
         window.location.href = "/thank.html";
+      }
+
+      async function increaseDownloadCount() {
+        let { data, error } = await supabase.rpc("increment_downloads");
+        if (error) {
+          console.error("Error incrementing download count:", error);
+        } else {
+          console.log("Download count increased:", data);
+        }
       }
     </script>
   </body>
